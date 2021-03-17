@@ -5,6 +5,7 @@
   padding: 10px 35px;
 
   &__logo {
+    text-decoration: none;
     margin-right: 25px;
     color: white;
   }
@@ -23,8 +24,8 @@
 
     &__icon {
       display: flex;
-      align-items: center;         
-      background-color: rgb(236, 199, 32);
+      align-items: center;
+      background-color: rgb(28, 206, 123);
       border-radius: 0px 10px 10px 0;
 
       i {
@@ -60,7 +61,7 @@
         position: absolute;
         top: -7px;
         left: 10px;
-        background-color: rgb(180, 54, 54);
+        background-color: rgb(28, 206, 123);
       }
     }
   }

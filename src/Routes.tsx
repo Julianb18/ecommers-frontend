@@ -10,7 +10,7 @@ const Routes = () => (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route exact path="/products/:id" component={Product} />
-    <Route exact path="/google/login" component={GoogleAuth} />
+    <Route exact path="/login" component={GoogleAuth} />
   </Switch>
 )
 
