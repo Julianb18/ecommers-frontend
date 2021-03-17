@@ -4,11 +4,12 @@ import { useSelector } from 'react-redux'
 
 import { AppState } from '../types'
 
-export default function Product() {
+export default function ExampleProduct() {
   const { id } = useParams()
 
   const product = useSelector((state: AppState) =>
-    state.product.inCart.find(p => p.id === id))
+    state.product.inCart.find((p) => p.id === id)
+  )
 
   if (!product) {
     return <div>Product not found</div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Home from './pages/Home'
+import Home from './pages/Home/Home'
 import Product from './pages/Product'
-import GoogleAuth from './pages/GoogleAuth'
+import GoogleAuth from './pages/GoogleAuth/GoogleAuth'
 import { Register } from './pages/Register'
 
 const Routes = () => (

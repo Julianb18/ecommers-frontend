@@ -1,0 +1,24 @@
+.product {
+  //   border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  width: 19rem;
+  background-color: white;
+  padding: 1rem;
+  margin: 0.5rem 0.5rem;
+
+  &__info {
+    &__name {
+      font-weight: 900;
+    }
+  }
+
+  &__image {
+    width: 250px;
+    align-self: center;
+
+    img {
+      width: 250px;
+    }
+  }
+}
