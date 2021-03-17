@@ -19,10 +19,10 @@ const Header = () => {
         <Link to="/login" className="header__nav__auth">
           Sign in
         </Link>
-        <div className="header__nav__cart">
+        <Link to="/cart" className="header__nav__cart">
           <i className="fas fa-shopping-cart"></i>
           <span className="header__nav__cart__count">0</span>
-        </div>
+        </Link>
       </div>
     </div>
   )
