@@ -1,37 +1,15 @@
-import { Dispatch } from 'redux'
+import { ADD_TO_CART, REMOVE_FROM_CART, Product, CartAction } from '../../types'
 
-import {
-  ADD_PRODUCT,
-  REMOVE_PRODUCT,
-  ProductActions,
-  Product,
-} from '../../types'
-
-export function addProduct(product: Product): ProductActions {
+export const addToCart = (product: Product): CartAction => {
   return {
-    type: ADD_PRODUCT,
-    payload: {
-      product,
-    },
+    type: ADD_TO_CART,
+    payload: { product },
   }
 }
 
-export function removeProduct(product: Product): ProductActions {
+export const removeFromCart = (product: Product): CartAction => {
   return {
-    type: REMOVE_PRODUCT,
-    payload: {
-      product,
-    },
-  }
-}
-
-// Async action processed by redux-thunk middleware
-export function fetchProduct(productId: string) {
-  return (dispatch: Dispatch) => {
-    return fetch(`products/${productId}`)
-      .then(resp => resp.json())
-      .then(product => {
-        dispatch(addProduct(product))
-      })
+    type: REMOVE_FROM_CART,
+    payload: { product },
   }
 }

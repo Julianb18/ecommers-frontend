@@ -1,9 +1,11 @@
+@import '../../utils/utils.scss';
+
 .product {
   //   border: 1px solid;
   display: flex;
   flex-direction: column;
   width: 19rem;
-  background-color: white;
+  background-color: $default-white;
   padding: 1rem;
   margin: 0.5rem 0.5rem;
 
@@ -14,11 +16,11 @@
   }
 
   &__image {
-    width: 250px;
+    // width: 18rem;
     align-self: center;
 
     img {
-      width: 250px;
+      width: 16rem;
     }
   }
 

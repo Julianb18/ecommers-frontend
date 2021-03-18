@@ -1,0 +1,31 @@
+@import '../../utils/utils.scss';
+
+.item {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid $grey;
+  padding: 0.6rem;
+
+  &__image {
+    img {
+      width: 12rem;
+    }
+  }
+
+  &__details {
+    flex: 3;
+    margin: 0 0.6rem 0 0.6rem;
+    position: relative;
+
+    button {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__price {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

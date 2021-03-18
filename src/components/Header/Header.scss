@@ -1,5 +1,7 @@
+@import '../../utils/utils.scss';
+
 .header {
-  background-color: rgb(17, 32, 44);
+  background-color: $primary;
   display: flex;
   align-items: center;
   padding: 10px 35px;
@@ -7,7 +9,7 @@
   &__logo {
     text-decoration: none;
     margin-right: 25px;
-    color: white;
+    color: $default-white;
   }
 
   &__search {
@@ -25,12 +27,12 @@
     &__icon {
       display: flex;
       align-items: center;
-      background-color: rgb(28, 206, 123);
+      background-color: $secondary;
       border-radius: 0px 10px 10px 0;
 
       i {
         padding: 10px;
-        color: rgb(17, 32, 44);
+        color: $primary;
       }
     }
   }
@@ -42,7 +44,7 @@
     align-items: center;
     &__auth {
       margin-right: 5rem;
-      color: white;
+      color: $default-white;
     }
 
     &__cart {
@@ -50,18 +52,18 @@
 
       i {
         font-size: 1.7rem;
-        color: white;
+        color: $default-white;
       }
       &__count {
         border-radius: 50%;
         font-size: 0.85rem;
         font-weight: 900;
-        color: white;
+        color: $default-white;
         padding: 1px 5px;
         position: absolute;
         top: -7px;
         left: 10px;
-        background-color: rgb(28, 206, 123);
+        background-color: $secondary;
       }
     }
   }

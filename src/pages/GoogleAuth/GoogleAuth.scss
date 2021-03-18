@@ -1,6 +1,8 @@
+@import '../../utils/utils.scss';
+
 .auth {
-  min-height: 100vh;
-  background-color: rgb(230, 230, 230);
+  // min-height: 100vh;
+  // background-color: rgb(230, 230, 230);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +10,7 @@
   &__logo {
     text-decoration: none;
     font-size: 1.8rem;
-    color: rgb(17, 32, 44);
+    color: $primary;
     margin: 2rem 0 1.2rem 0;
   }
 
@@ -19,7 +21,7 @@
     height: 25rem;
     width: 20rem;
     padding: 2rem;
-    background-color: white;
+    background-color: $default-white;
 
     h2 {
       margin-bottom: 1rem;
@@ -36,13 +38,12 @@
 
       button {
         border: none;
-        border: 1px solid black;
+        border: 1px solid $default-black;
         padding: 0.4rem 0;
-        background: linear-gradient(rgb(144, 218, 183), rgb(28, 206, 123));
+        background: linear-gradient($secondary-light, $secondary);
         cursor: pointer;
         border-radius: 2px;
       }
-      //   border: 1px solid;
     }
 
     &____googleBtn {

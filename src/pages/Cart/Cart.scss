@@ -1,26 +1,52 @@
+@import '../../utils/utils.scss';
+
 .cart {
-  min-height: 100vh;
-  background-color: rgb(230, 230, 230);
+  // min-height: 100vh;
+  // background-color: rgb(230, 230, 230);
   padding: 1.4rem;
 
   &__container {
     display: flex;
-    min-height: 100vh;
+    // min-height: 100vh;
     align-items: flex-start;
 
     &__left {
       //   border: 1px solid;
-      background-color: white;
+      background-color: $default-white;
       flex: 4;
       margin-right: 20px;
       border-radius: 2px;
+      padding: 0.8rem;
+
+      &__total {
+        border-top: 1px solid $grey;
+        display: flex;
+        justify-content: flex-end;
+      }
     }
 
     &__right {
       //   border: 1px solid;
-      background-color: white;
+      background-color: $default-white;
       flex: 1;
       border-radius: 2px;
+      padding: 0.8rem;
+
+      &__total {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 0.5rem;
+      }
+      button {
+        width: 100%;
+        border: none;
+        padding: 0.4rem 0;
+        background-color: $secondary;
+        background: linear-gradient($secondary-light, $secondary);
+        cursor: pointer;
+        border-radius: 5px;
+      }
     }
   }
 }
