@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Home from './pages/Home/Home'
-import Product from './pages/Product'
+// import Product from './pages/ProductDemo'
 import GoogleAuth from './pages/GoogleAuth/GoogleAuth'
 // import { Register } from './pages/Register'
 import Cart from './pages/Cart/Cart'
@@ -18,7 +18,7 @@ const Routes = () => (
       <Header />
       <Cart />
     </Route>
-    <Route exact path="/products/:id" component={Product} />
+    {/* <Route exact path="/products/:id" component={Product} /> */}
     <Route exact path="/login" component={GoogleAuth} />
   </Switch>
 )

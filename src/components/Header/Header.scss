@@ -4,7 +4,7 @@
   background-color: $primary;
   display: flex;
   align-items: center;
-  padding: 10px 35px;
+  padding: 1.3rem 3rem;
 
   &__logo {
     text-decoration: none;
@@ -51,12 +51,12 @@
       position: relative;
 
       i {
-        font-size: 1.7rem;
+        font-size: 1.9rem;
         color: $default-white;
       }
       &__count {
         border-radius: 50%;
-        font-size: 0.85rem;
+        font-size: 1rem;
         font-weight: 900;
         color: $default-white;
         padding: 1px 5px;

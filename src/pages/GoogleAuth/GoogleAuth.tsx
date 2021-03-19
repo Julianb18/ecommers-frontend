@@ -1,18 +1,36 @@
 import React from 'react'
+
+import { useDispatch } from 'react-redux'
 import GoogleLogin from 'react-google-login'
 import axios from 'axios'
 
 import './GoogleAuth.scss'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import { logUser } from '../../redux/actions/user'
 
 const GoogleAuth = () => {
+  const dispatch = useDispatch()
+  const history = useHistory()
+
   const responseGoogle = async (response: any) => {
     console.log(response)
     const res = await axios.post('http://localhost:5001/google/login', {
       id_token: response.tokenObj.id_token,
     })
-    console.log(res.data)
+    const user = {
+      name: res.data.user.name,
+      email: res.data.user.email,
+      token: res.data.token,
+    }
+    dispatch(logUser(user))
+    history.push('/')
   }
+
+  // export type User = {
+  //   name: string
+  //   email: string
+  //   token: string
+  // }
 
   return (
     <div className="auth">

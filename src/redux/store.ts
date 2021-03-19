@@ -6,16 +6,7 @@ import { AppState } from '../types'
 import createRootReducer from './reducers'
 import rootSaga from './sagas'
 
-const initState: AppState = {
-  product: {
-    inCart: [],
-  },
-  ui: {
-    dialogOpen: {},
-  },
-}
-
-export default function makeStore(initialState = initState) {
+export default function makeStore() {
   const sagaMiddleware = createSagaMiddleware()
   const middlewares = [sagaMiddleware, thunk]
   let composeEnhancers = compose
@@ -28,7 +19,7 @@ export default function makeStore(initialState = initState) {
 
   const store = createStore(
     createRootReducer(),
-    initialState,
+
     composeEnhancers(applyMiddleware(...middlewares))
   )
 
