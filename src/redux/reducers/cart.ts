@@ -1,6 +1,5 @@
 import {
   ProductState,
-  ProductActions,
   ADD_TO_CART,
   REMOVE_FROM_CART,
   CartActions,

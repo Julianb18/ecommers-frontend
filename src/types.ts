@@ -135,3 +135,8 @@ export type UserActions = LogUserActions | LogOutUserActions
 export type UserState = {
   loggedUser: User
 }
+
+export type SearchProps = {
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  productSearch: string
+}

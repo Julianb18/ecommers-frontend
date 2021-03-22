@@ -4,8 +4,6 @@ import { addToCart } from '../../redux/actions/cart'
 
 import { Product } from '../../types'
 
-// import { Product } from '../../types'
-// import { addProduct } from '../../redux/actions'
 import './ProductCard.scss'
 
 const ProductCard = ({
@@ -32,8 +30,7 @@ const ProductCard = ({
       <div className="product__info">
         <h3 className="product__info__name">{model}</h3>
         <p className="product__info__price">
-          <small>‎€</small>
-          <strong>{price}</strong>
+          ‎€<span>{price}</span>
         </p>
       </div>
       <div className="product__image">

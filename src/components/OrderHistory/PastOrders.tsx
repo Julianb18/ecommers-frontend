@@ -16,12 +16,11 @@ const PastOrders = () => {
   }, [dispatch])
   return (
     <div>
-      <h3>Order History</h3>
       {previousOrders.map((order) => (
-        <>
+        <div key={order._id}>
           <p>{order._id}</p>
           <p>{order.products.length}</p>
-        </>
+        </div>
       ))}
     </div>
   )

@@ -49,11 +49,8 @@ export function fetchProduct(productId: string) {
 
 export const fetchAllProducts = () => {
   return async (dispatch: Dispatch) => {
-    console.log('getting all products')
     const response = await axios.get(`/api/v1/products`)
-    console.log(response)
     const data = await response.data
     dispatch(addAllProducts(data))
-    console.log(data)
   }
 }

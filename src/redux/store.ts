@@ -2,7 +2,6 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import thunk from 'redux-thunk'
 
-import { AppState } from '../types'
 import createRootReducer from './reducers'
 import rootSaga from './sagas'
 
@@ -19,7 +18,6 @@ export default function makeStore() {
 
   const store = createStore(
     createRootReducer(),
-
     composeEnhancers(applyMiddleware(...middlewares))
   )
 

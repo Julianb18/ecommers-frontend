@@ -40,12 +40,11 @@ export function fetchOrderHistory(token: string) {
   return async (dispatch: Dispatch) => {
     const res = await axios.get(`/api/v1/orders`, {
       headers: {
-        Authorization: `Bearer ${token}`, // header with token
+        Authorization: `Bearer ${token}`,
       },
     })
     const data = await res.data
     dispatch(addOrderHistory(data))
-    console.log(data)
   }
 }
 
@@ -53,13 +52,13 @@ export const createOrder = (products: Product[], token: string) => {
   return async (dispatch: Dispatch) => {
     const productsId = products.map((product) => product._id)
     // calculate total price here
-    console.log(productsId)
+    // console.log(productsId)
     const res = await axios.post(
-      `/api/v1/orders`, // url
+      `/api/v1/orders`,
       { productsId }, // {productsId, totalPrice}
       {
         headers: {
-          Authorization: `Bearer ${token}`, // header with token
+          Authorization: `Bearer ${token}`,
         },
       }
     )

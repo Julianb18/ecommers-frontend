@@ -11,11 +11,11 @@ import Header from './components/Header/Header'
 const Routes = () => (
   <Switch>
     <Route exact path="/">
-      <Header />
+      {/* <Header /> */}
       <Home />
     </Route>
     <Route exact path="/cart">
-      <Header />
+      {/* <Header /> */}
       <Cart />
     </Route>
     {/* <Route exact path="/products/:id" component={Product} /> */}
