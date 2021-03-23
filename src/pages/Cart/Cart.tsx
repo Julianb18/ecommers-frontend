@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 import BasketItem from '../../components/BasketItem/BasketItem'
 import Header from '../../components/Header/Header'
 import PastOrders from '../../components/OrderHistory/PastOrders'
@@ -12,23 +13,31 @@ import './Cart.scss'
 
 const Cart = () => {
   const dispatch = useDispatch()
-  // const products = useSelector((state: AppState) => state.cart.products)
+  const products = useSelector((state: AppState) => state.cart.products)
   const token = useSelector((state: AppState) => state.user.loggedUser.token)
-  const [productSearch, setProductSearch] = useState<string>('')
-  const [products] = useProducts(productSearch)
+  // const [productSearch, setProductSearch] = useState<string>('')
+  // const [products] = useProducts(productSearch)
 
   const prices = products.map((product) => product.price)
-  const total = prices.reduce(function (a, b) {
-    return a + b
-  }, 0)
+  const total = prices
+    .reduce(function (acc, price) {
+      return acc + price
+    }, 0)
+    .toFixed(2)
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setProductSearch(event.target.value)
-  }
+  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setProductSearch(event.target.value)
+  // }
 
   return (
     <>
-      <Header productSearch={productSearch} handleChange={handleChange} />
+      {/* <Header productSearch={productSearch} handleChange={handleChange} /> */}
+
+      <Link to="/" className="back">
+        <i className="fas fa-chevron-left"></i>
+        <p>Home</p>
+      </Link>
+
       <div className="cart">
         <div className="cart__container">
           <div className="cart__container__left">
