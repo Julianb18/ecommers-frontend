@@ -7,10 +7,10 @@ import { fetchAllProducts } from '../redux/actions/product'
 export const useProducts = (productSearch: string): [Product[]] => {
   const dispatch = useDispatch()
 
-  const [searchedProducts, setSearchedProducts] = useState<Product[]>([])
+  const [searchedProducts, setSearchedProducts] = useState<any>([])
 
   const productList = useSelector((state: AppState) => state.product.products)
-  console.log(productList)
+  // console.log(productList)
 
   useEffect(() => {
     dispatch(fetchAllProducts())
@@ -18,14 +18,18 @@ export const useProducts = (productSearch: string): [Product[]] => {
 
   // search by name of product / brand or model
   useEffect(() => {
-    let filteredByName = productList.filter(
-      (product) =>
+    let filteredByKeyWord = productList.filter((product) => {
+      let searched = `${product.brand.toLowerCase()} ${product.productName.toLowerCase()} ${product.brand.toLowerCase()} ${product.model.toLowerCase()}`
+      console.log(searched)
+      return (
+        searched.toLowerCase().includes(productSearch.toLowerCase()) ||
         product.brand.toLowerCase().includes(productSearch.toLowerCase()) ||
         product.model.toLowerCase().includes(productSearch.toLowerCase()) ||
         product.productName.toLowerCase().includes(productSearch.toLowerCase())
-    )
+      )
+    })
 
-    setSearchedProducts(filteredByName)
+    setSearchedProducts(filteredByKeyWord)
   }, [productList, productSearch])
 
   return [searchedProducts]

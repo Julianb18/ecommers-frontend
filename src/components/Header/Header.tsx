@@ -14,7 +14,7 @@ const Header = ({ productSearch, handleChange }: SearchProps) => {
 
   const dispatch = useDispatch()
 
-  console.log(allProducts)
+  // console.log(allProducts)
 
   return (
     <div className="header">
